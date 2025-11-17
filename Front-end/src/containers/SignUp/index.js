@@ -14,7 +14,7 @@ import LoginGoogle from 'components/LoginGoogle';
 import constants from 'constants/index';
 import { FastField, Form, Formik } from 'formik';
 import React, { useRef, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import './index.scss';
 
@@ -24,7 +24,7 @@ function SignUp() {
   // fn: trạng thái gửi mã xác thực
   const [isSending, setIsSending] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isRedirectLogin, setIsRedirectLogin] = useState(false);
+  const [isNavigateLogin, setIsNavigateLogin] = useState(false);
 
   // ref kiểm tra đã nhập email hay chưa, hỗ trợ việc gửi mã xác nhận
   const emailRef = useRef('');
@@ -67,7 +67,7 @@ function SignUp() {
       if (result.status === 200) {
         message.success('Đăng ký thành công.', 1);
         setIsSubmitting(false);
-        setIsRedirectLogin(true);
+        setIsNavigateLogin(true);
       }
     } catch (error) {
       setIsSubmitting(false);
@@ -141,9 +141,9 @@ function SignUp() {
   return (
     <div className="SignUp container">
       {/*// Note: chuyển đến trang login khi đăng ký thành công */}
-      {isRedirectLogin && (
+      {isNavigateLogin && (
         <Delay wait={constants.DELAY_TIME}>
-          <Redirect to={constants.ROUTES.LOGIN} />
+          <Navigate to={constants.ROUTES.LOGIN} replace/>
         </Delay>
       )}
 

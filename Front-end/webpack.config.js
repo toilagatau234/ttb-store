@@ -76,11 +76,14 @@ module.exports = {
   devServer: {
     //fix can not get /url React-Router
     historyApiFallback: true,
-    proxy: {
-      '/api': {
+    proxy: [ // Thay đổi: Chuyển thành một mảng
+      {
+        context: ['/api'], // Bạn có thể thêm nhiều context ở đây
         target: 'http://localhost:3000/',
-      },
-    },
+        pathRewrite: { '^/api': '/apis' }, // Thêm dòng này để khớp với baseURL của bạn
+        secure: false
+      }
+    ],
   },
   //resolve issue Relative Import -> Absolute Import
   resolve: {

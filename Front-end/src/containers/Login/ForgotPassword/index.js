@@ -10,7 +10,7 @@ import Delay from 'components/Delay';
 import constants from 'constants/index';
 import { FastField, Form, Formik } from 'formik';
 import React, { useRef, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import accountApi from 'apis/accountApi';
 import * as Yup from 'yup';
 import './index.scss';
@@ -101,7 +101,7 @@ function ForgotPassword() {
       {/* chuyển về home khi đã login */}
       {isSuccess && (
         <Delay wait={constants.DELAY_TIME}>
-          <Redirect to={constants.ROUTES.LOGIN} />
+          <Navigate to={constants.ROUTES.LOGIN} replace/>
         </Delay>
       )}
 

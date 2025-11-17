@@ -9,7 +9,7 @@ import userLogo from 'assets/icon/user_32px.png';
 import constants from 'constants/index';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Link, Redirect, useLocation } from 'react-router-dom';
+import { Link, Navigate, useLocation } from 'react-router-dom';
 import './index.scss';
 import OrderList from './OrderList';
 import UpdateAccountForm from './UpdateForm';

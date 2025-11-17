@@ -18,7 +18,7 @@ import AddressUserList from 'containers/AccountPage/UserAddressList';
 import helpers from 'helpers';
 import React, { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import cartReducers from 'reducers/carts';
 
 // fn: Lấy địa chỉ giao hàng của user theo index
@@ -131,7 +131,7 @@ function PaymentPage() {
   return (
     <>
       {carts.length <= 0 && !isOrderSuccess && (
-        <Redirect to={constants.ROUTES.CART} />
+        <Navigate to={constants.ROUTES.CART} replace/>
       )}
       {isAuth ? (
         <div className="m-tb-32 container">
@@ -277,7 +277,7 @@ function PaymentPage() {
           )}
         </div>
       ) : (
-        <Redirect to={constants.ROUTES.LOGIN} />
+        <Navigate to={constants.ROUTES.LOGIN} replace/>
       )}
     </>
   );

@@ -85,14 +85,13 @@ const routes = [
 ];
 
 // render routes
-const renderRoutes = (routes) => {
-  return routes.map((route, index) => {
-    const { path, exact, main } = route;
-    return <Route key={index} path={path} exact={exact} component={main} />;
-  });
-};
+// const renderRoutes = (routes) => {
+//   return routes.map((route, index) => {
+//     const { path, exact, main } = route;
+//     return <Route key={index} path={path} exact={exact} component={main} />;
+//   });
+// };
 
 export default {
-  routes,
-  renderRoutes,
+  routes
 };

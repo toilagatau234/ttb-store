@@ -2,7 +2,7 @@ import productApi from 'apis/productApi';
 import GlobalLoading from 'components/Loading/Global';
 import ProductDetail from 'components/ProductDetail';
 import React, { useEffect, useRef, useState } from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 function ProductDetailPage() {
   const { productId } = useParams();
@@ -36,7 +36,7 @@ function ProductDetailPage() {
       ) : (
         <GlobalLoading content="Đang tải sản phẩm ..." />
       )}
-      {isNotFoundProduct && <Redirect to="/not-found" />}
+      {isNotFoundProduct && <Navigate to="/not-found" replace/>}
     </>
   );
 }
