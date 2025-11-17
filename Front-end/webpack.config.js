@@ -2,14 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  node: {
-    fs: 'empty',
-  },
+  
   entry: {
     //name: path
     main: './src/index.js',
@@ -50,7 +48,7 @@ module.exports = {
       minify: false,
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.min.css',
+      filename: '[name].style.min.css',
     }),
     new Dotenv(),
   ],
@@ -59,6 +57,12 @@ module.exports = {
       //cacheGroup giup tang toc do load trang nho viec cache lai tren browser
       //nhung thu vien khong thay doi ngay
       cacheGroups: {
+        styles: {
+        name: 'styles',
+        test: /\.css$/,
+        chunks: 'all',
+        enforce: true,
+        },
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
@@ -68,7 +72,7 @@ module.exports = {
       },
     },
     //minifile js, css
-    minimizer: [new TerserPlugin({}), new OptimizeCssAssetsPlugin({})],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   //allow find error and notification in mini-file
   devtool: 'inline-source-map',
@@ -88,5 +92,8 @@ module.exports = {
   //resolve issue Relative Import -> Absolute Import
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
+    fallback: {
+      "fs": false
+    },
   },
 };
