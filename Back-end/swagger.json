@@ -1,11 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "API dành cho trang web TTB Store",
+    "description": "API dành cho trang web Sandra Store",
     "version": "1.0.0",
-    "title": "TTB Store API",
+    "title": "Sandra Store API",
     "contact": {
-      "email": "tuannguyentn2504@gmail.com"
+      "email": "toilagatau234@gmail.com"
     }
   },
   "basePath": "/",

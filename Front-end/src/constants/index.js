@@ -1698,7 +1698,7 @@ const PAIR_CONVERT_KEY = [
 
 export default {
   REFRESH_TOKEN_KEY: 'refresh_token',
-  ACCESS_TOKEN_KEY: 'ttb_atk',
+  ACCESS_TOKEN_KEY: 'sandra_atk',
   MAX_VERIFY_CODE: 6,
   TRANSPORT_METHOD_OPTIONS,
   GENDER_OPTIONS,
@@ -1718,7 +1718,7 @@ export default {
   MAX_RELATED_PRODUCTS: 12,
   // Avatar mặc định của user
   DEFAULT_USER_AVT:
-    'https://res.cloudinary.com/tuan-cloudinary/image/upload/c_scale,q_60,w_80/v1607750466/defaults/default-avatar_amkff5.jpg',
+    'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763451227/default-avatar_amkff5_e3hn7a.jpg',
   // Số comment sản phẩm trên trang
   COMMENT_PER_PAGE: 5,
   // độ dài tối đa của cmt

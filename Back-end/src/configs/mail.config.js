@@ -22,7 +22,7 @@ const sendEmail = async ({ to, subject, text, html, ...rest }) => {
       //config mail
       const mail = {
         //sender access
-        from: '"TTB Store" <no-reply@accounts.ttb-store.com>',
+        from: '"Sandra Store" <no-reply@accounts.sandra-store.com>',
         //receiver access
         to,
         //subject
@@ -47,7 +47,7 @@ const sendEmail = async ({ to, subject, text, html, ...rest }) => {
 };
 
 const headerHtmlMail = `<h1 style="color: #4c649b; font-size: 48px; border-bottom: solid 2px #ccc;padding-bottom: 10px">
-      TTB Store<br />
+      Sandra Store<br />
     </h1>`;
 const footerHtmlVerifyMail = `<h3 style="color: red">
         Chú ý: Không đưa mã này cho bất kỳ ai,
@@ -62,8 +62,8 @@ const htmlSignupAccount = (token) => {
     ${headerHtmlMail}
     <h2 style="padding: 10px 0; margin-bottom: 10px;">
         Xin chào anh (chị),<br />
-        Mã xác nhận đăng ký tài khoản cho website TTB Store của anh (chị).<br />
-        Cảm ơn vì đã ghé thăm TTB Store <3
+        Mã xác nhận đăng ký tài khoản cho website Sandra Store của anh (chị).<br />
+        Cảm ơn vì đã ghé thăm Sandra Store <3
     </h2>
     <h3 style="background: #eee;padding: 10px;">
       <i><b>${token}</b></i>
@@ -78,7 +78,7 @@ const htmlResetPassword = (token) => {
     ${headerHtmlMail}
     <h2 style="padding: 10px 0; margin-bottom: 10px;">
         Xin chào anh (chị),<br />
-        Cửa hàng TTB Store đã nhận được yêu cầu lấy lại mật khẩu từ quý khách.<br />
+        Cửa hàng Sandra Store đã nhận được yêu cầu lấy lại mật khẩu từ quý khách.<br />
         Đừng lo lắng, hãy nhập mã này để khôi phục:
     </h2>
     <h1 style="background: #eee;padding: 10px;">

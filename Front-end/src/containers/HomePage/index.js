@@ -36,7 +36,7 @@ function HomePage() {
           <a href="https://www.apple.com/watch/" target="blank">
             <img
               className="adv-img w-100 bor-rad-8"
-              src="https://res.cloudinary.com/tuan-cloudinary/image/upload/v1608268459/others/1_iorzsj.webp"
+              src="https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452137/1_iorzsj_uhw6pz.webp"
             />
           </a>
         </Col>
@@ -55,7 +55,7 @@ function HomePage() {
           <a href="https://www.panasonic.com/vn/" target="blank">
             <img
               className="adv-img w-100 bor-rad-8"
-              src="https://res.cloudinary.com/tuan-cloudinary/image/upload/v1608268459/others/2_wapowv.webp"
+              src="https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452136/2_wapowv_hjomg3.webp"
             />
           </a>
         </Col>

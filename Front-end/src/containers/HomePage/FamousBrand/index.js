@@ -22,28 +22,28 @@ const list = [
   {
     link: 'https://vn.msi.com/',
     src:
-      'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1608268385/famous-brands/msi_zjnihe.webp',
+      'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452244/msi_zjnihe_ckav5t.webp',
     title: 'MSI',
     desc: 'Bé rồng đỏ siêu cute, gaming',
   },
   {
     link: 'https://www8.hp.com/us/en/home.html',
     src:
-      'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1608268384/famous-brands/hp_cdxdv8.webp',
+      'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452244/hp_cdxdv8_mxuslc.webp',
     title: 'HP',
     desc: 'Laptop siêu cấp vip pro',
   },
   {
     link: 'https://www.lenovo.com/vn/vn/',
     src:
-      'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1608268384/famous-brands/lenovo_trmmkt.webp',
+      'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452244/lenovo_trmmkt_juufa1.webp',
     title: 'LENOVO',
     desc: 'Siêu ưu đãi cùng với LENOVO',
   },
   {
     link: 'https://www.lg.com/vn',
     src:
-      'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1608268384/famous-brands/lg_yijaob.webp',
+      'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452245/lg_yijaob_rowlzc.webp',
     title: 'LG',
     desc: 'Sản phẩm siêu chất lượng',
   },

@@ -2,12 +2,10 @@ import { Carousel } from 'antd';
 import React from 'react';
 import './index.scss';
 
-// Do cả chương trình chỉ có 1 list carousel
-// Nên lưu thẳng vào đây để đỡ tốn chi phí query
 const list = [
-  'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1609752561/saleOff/carousels/unnamed_2_d2ccjd.webp',
-  'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1609752560/saleOff/carousels/unnamed_flqfng.webp',
-  'https://res.cloudinary.com/tuan-cloudinary/image/upload/v1609752560/saleOff/carousels/unnamed_1_t5luv4.webp',
+  'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452410/unnamed_2_d2ccjd_xwiypl.webp',
+  'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452409/unnamed_flqfng_qafqwa.webp',
+  'https://res.cloudinary.com/dmlv4rbtm/image/upload/v1763452409/unnamed_1_t5luv4_t64cl6.webp',
 ];
 
 function ProductCarousel() {
