@@ -178,6 +178,7 @@ const FILTER_ACCESSORY_LAPTOP = [
     to: '/',
   },
 ];
+
 // ram
 const FILTER_BRAND_RAM = [
   {
@@ -283,6 +284,7 @@ const FILTER_GENERATION_RAM = [
     to: 'DDR4',
   },
 ];
+
 // disk
 const FILTER_BRAND_DISK = [
   {
@@ -406,6 +408,7 @@ const FILTER_TYPE_DISK = [
     to: 'HDD',
   },
 ];
+
 // camera
 const FILTER_BRAND_CAMERA = [
   {
@@ -435,6 +438,7 @@ const FILTER_OTHER_CAMERA = [
     to: 'transcend',
   },
 ];
+
 // monitor
 const FILTER_BRAND_MONITOR = [
   {
@@ -578,6 +582,7 @@ const FILTER_FREQUENCY_MONITOR = [
     to: '200Hz',
   },
 ];
+
 // display
 const FILTER_BRAND_DISPLAY = [
   {
@@ -645,6 +650,7 @@ const FILTER_MANUFACTURER_DISPLAY = [
     to: 'AMD',
   },
 ];
+
 // mobile
 const FILTER_BRAND_MOBILE = [
   {
@@ -764,6 +770,7 @@ const FILTER_ACCESSORY_MOBILE = [
     to: '/',
   },
 ];
+
 // mouse
 const FILTER_BRAND_MOUSE = [
   {
@@ -815,6 +822,7 @@ const FILTER_LED_MOUSE = [
     to: 'khong_Led',
   },
 ];
+
 // keyboard
 const FILTER_BRAND_KEYBOARD = [
   {
@@ -900,6 +908,7 @@ const FILTER_LED_KEYBOARD = [
     to: '3',
   },
 ];
+
 //headphone
 const FILTER_TYPE_HEADPHONE = [
   {
@@ -941,6 +950,7 @@ const FILTER_CONNECT_STD_HEADPHONE = [
     to: '4',
   },
 ];
+
 // router
 const FILTER_BRAND_ROUTER = [
   {
@@ -1024,6 +1034,7 @@ const FILTER_STRONG_ROUTER = [
     to: '11dBi',
   },
 ];
+
 //speaker
 const FILTER_BRAND_SPEAKER = [
   {
@@ -1131,6 +1142,7 @@ const FILTER_CONNECT_STD_SPEAKER = [
     to: `micro usb`,
   },
 ];
+
 // mainboard
 const FILTER_BRAND_MAINBOARD = [
   {
@@ -1300,6 +1312,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 1: DISK
   {
     key: 1,
@@ -1332,6 +1345,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 2: RAM
   {
     key: 4,
@@ -1359,6 +1373,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 3: MONITOR
   {
     key: 9,
@@ -1391,6 +1406,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 4: DISPLAY
   {
     key: 2,
@@ -1413,6 +1429,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 5: MOBILE
   {
     key: 5,
@@ -1440,6 +1457,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 6: MOUSE
   {
     key: 10,
@@ -1462,6 +1480,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 12: KEYBOARD
   {
     key: 8,
@@ -1489,6 +1508,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+  
   // 7: HEADPHONE
   {
     key: 7,
@@ -1506,6 +1526,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 8: ROUTER
   {
     key: 11,
@@ -1528,6 +1549,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 9: SPEAKER
   {
     key: 12,
@@ -1550,6 +1572,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+
   // 10: CAMERA
   {
     key: 13,
@@ -1567,6 +1590,7 @@ const FILTER_OPTION_LIST = [
       },
     ],
   },
+  
   // 11: MAINBOARD
   {
     key: 3,

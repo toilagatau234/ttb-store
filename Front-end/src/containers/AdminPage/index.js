@@ -14,7 +14,7 @@ import { Button, Menu } from 'antd';
 import Avatar from 'antd/lib/avatar/avatar';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import defaultAvt from 'assets/imgs/default-avt.png';
-import logoUrl from 'assets/imgs/sec_logo.png';
+import logoUrl from 'assets/imgs/logo.png';
 import React, { useState } from 'react';
 import Dashboard from './Dashboard';
 import './index.scss';

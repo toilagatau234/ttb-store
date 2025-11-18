@@ -11,6 +11,7 @@ function Filter() {
     list: [],
     root: '',
   });
+
   // event: hiển thị chi tiết filter menu
   const onShowDetails = (key) => {
     const list = constants.FILTER_OPTION_LIST.find((item) => item.key === key);

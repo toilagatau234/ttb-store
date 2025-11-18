@@ -212,7 +212,7 @@ function ProductOverview(props) {
             size="large"
             className="m-tb-16 w-100 btn-group-item"
             style={{ backgroundColor: '#3555c5' }}>
-            <a href="https://fb.com/TuanNguyen250400" target="blank">
+            <a href="https://www.facebook.com/nguyen.quocanh.1102.4/" target="blank">
               <PhoneOutlined style={{ fontSize: 18 }} className="m-r-8" /> LIÊN
               HỆ
             </a>

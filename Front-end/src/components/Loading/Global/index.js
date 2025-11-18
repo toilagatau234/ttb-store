@@ -13,7 +13,7 @@ function GlobalLoading(props) {
 }
 
 GlobalLoading.defaultProps = {
-  content: 'TTB Store Loading...',
+  content: 'Sandra Store Loading...',
 };
 
 GlobalLoading.propTypes = {

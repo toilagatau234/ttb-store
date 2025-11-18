@@ -30,6 +30,7 @@ function InputField(props) {
   const { name } = field;
   const { errors, touched } = form;
   const showError = errors[name] && touched[name];
+  
   //Input or Input.Password
   const InputOption = type === 'password' ? Input.Password : Input;
   return (

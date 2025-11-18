@@ -27,7 +27,10 @@ function AddressAddForm(props) {
         if (response) {
           if (isSubscribe) setProvinceList(response.data);
         }
-      } catch (error) {}
+      } catch (error) {
+        console.error('Failed to fetch province list:', error);
+        message.error('Không thể tải danh sách tỉnh/thành. Vui lòng thử lại sau.');
+      }
     }
     getProvinceList();
     // cleanup

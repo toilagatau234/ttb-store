@@ -6,7 +6,8 @@ const helpers = require('../helpers');
 // Vì không phải lúc nào cũng cần dùng đến huyện/xã
 const getProvince = async (req, res, next) => {
   try {
-    const list = await AddressModel.find({}).select('-districts -_id');
+    const list = await AddressModel.find({}).select('-_id');
+    console.log('province list:', list);
     if (list) {
       return res.status(200).json(list);
     }
@@ -20,7 +21,9 @@ const getProvince = async (req, res, next) => {
 const getDistrict = async (req, res, next) => {
   try {
     const { id } = req.query;
+    console.log('req.query in getDistrict:', req.query);
     const data = await AddressModel.findOne({ id }).select('districts -_id');
+    console.log('data in getDistrict:', data);
     if (data) {
       const list = data.districts.map((item) => {
         return { id: item.id, name: item.name };

@@ -84,6 +84,7 @@ function OrderList() {
       render: (orderStatus) => helpers.convertOrderStatus(orderStatus),
     },
   ];
+
   // fn: hiển thị danh sách đơn hàng
   function showOrderList(list) {
     return list && list.length === 0 ? (

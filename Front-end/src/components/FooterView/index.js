@@ -19,25 +19,25 @@ function FooterView() {
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn mua hàng</h2>
             <h2 className="footer-contact-item">
-              <b>0840.67.9081</b>
+              <b>078.28.08.968</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn đào tạo</h2>
             <h2 className="footer-contact-item">
-              <b>0841.67.9111</b>
+              <b>078.28.08.968</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Tư vấn quảng cáo</h2>
             <h2 className="footer-contact-item">
-              <b>0842.67.9022</b>
+              <b>078.28.08.968</b>
             </h2>
           </div>
           <div className="d-flex flex-direction-column">
             <h2 className="footer-contact-item">Hỗ trợ kỹ thuật</h2>
             <h2 className="footer-contact-item">
-              <b>090.267.9011</b>
+              <b>078.28.08.968</b>
             </h2>
           </div>
         </div>
@@ -46,18 +46,17 @@ function FooterView() {
       <div className="container p-tb-32">
         <p className="t-center" style={{ color: '#888' }}>
           <span className="font-size-18px">
-            CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ TTB STORE
+            CÔNG TY TRÁCH NHIỆM HỮU HẠN THƯƠNG MẠI - DỊCH VỤ NTV SANDRA STORE
           </span>
           <br />
-          <strong>Trụ sở:</strong>&nbsp;Số 16 VillaD, The Manor, khu đô thị mới
-          Mỹ Đình Mễ Trì, Phường 1, Quận 12, Thành phố Hồ Chí Minh
+          <strong>Trụ sở:</strong>&nbsp;Số 1 Cộng Hòa, Phường 4, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam
           <br />
-          <strong>Văn phòng:</strong>&nbsp; Tầng 16, Tòa Văn phòng, Vincom, số
-          54 Nguyễn Chí Thanh, Phường 5, Quận 12, Thành phố Hồ Chí Minh
+          <strong>Văn phòng:</strong>&nbsp; Phòng 507 Tầng 5, Tòa G, số
+          1 Cộng Hòa, Phường 4, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam
           <br />
-          <strong>Điện&nbsp;thoại:</strong>&nbsp;0840.67.9081 |{' '}
-          <strong>Email:</strong>&nbsp;ttbstore@gmail.com&nbsp;|{' '}
-          <strong>Website:</strong>&nbsp;<a href="/">ttbstore.vn</a>
+          <strong>Điện&nbsp;thoại:</strong>&nbsp;078.28.08.968 |{' '}
+          <strong>Email:</strong>&nbsp;toilagatau234@gmail.com&nbsp;|{' '}
+          <strong>Website:</strong>&nbsp;<a href="/">sandrastore.vn</a>
         </p>
         <div className="d-flex align-i-center justify-content-center">
           <img src={registeredImg} width={175} />
@@ -65,7 +64,7 @@ function FooterView() {
             <img src={iconPhoneFooter} />
             <div className="t-center m-l-16">
               <h2 style={{ color: '#CE1F26' }}>Hotline</h2>
-              <h2 style={{ color: '#CE1F26' }}>0840.67.9088</h2>
+              <h2 style={{ color: '#CE1F26' }}>078.28.08.968</h2>
             </div>
           </div>
           <div className="d-flex">
