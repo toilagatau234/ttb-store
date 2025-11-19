@@ -22,6 +22,7 @@ const commentApi = require('./src/apis/comment.api');
 const userApi = require('./src/apis/user.api');
 const orderApi = require('./src/apis/order.api');
 const statisticApi = require('./src/apis/statistic.api');
+const vnpayApi = require('./src/apis/vnpay.api');
 
 // ! ================== set port ================== //
 const app = express();
@@ -91,6 +92,9 @@ app.use('/apis/orders', orderApi);
 
 // api liên quản đến thống kê admin
 app.use('/apis/statistic', statisticApi);
+
+//api  liên quan đến VNpay
+app.use('/apis/vnpay', vnpayApi);
 
 // Note: Khi deploy production, việc redirect các route sẽ để react giải quyết
 app.get('*', (req, res) => {

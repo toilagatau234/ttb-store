@@ -57,7 +57,9 @@ const postCreateOrder = async (req, res, next) => {
       note,
     } = data;
 
-    let response = {};
+    let createdOrders = [];
+    let totalAmount = 0;
+
     for (let i = 0; i < productList.length; ++i) {
       const { orderProd, numOfProd } = productList[i];
       const product = await ProductModel.findById(orderProd.id);
@@ -69,7 +71,7 @@ const postCreateOrder = async (req, res, next) => {
             { _id: orderProd.id },
             { stock: product.stock - parseInt(numOfProd) },
           );
-          response = await OrderModel.create({
+          const newOrder = await OrderModel.create({
             owner,
             orderCode: helpers.generateVerifyCode(6),
             deliveryAdd,
@@ -82,12 +84,33 @@ const postCreateOrder = async (req, res, next) => {
             numOfProd,
             note,
           });
+
+          if (newOrder) {
+             createdOrders.push(newOrder.orderCode);
+             // Tính tổng tiền thật (đã trừ khuyến mãi)
+             totalAmount += (newOrder.orderProd.price * newOrder.numOfProd - (newOrder.orderProd.price * newOrder.numOfProd * newOrder.orderProd.discount) / 100) + newOrder.transportFee;
+          }
         }
       } else {
         return res.status(401).json({ message: 'Sản phẩm đẫ ngừng bán' });
       }
     }
-    if (response) return res.status(200).json({});
+    // if (response) return res.status(200).json({});
+
+    if (createdOrders.length > 0) {
+      // Nếu là thanh toán tiền mặt, trả về như cũ
+      if (paymentMethod === 0) {
+        return res.status(200).json({});
+      } 
+      // Nếu là VNPay, trả về mã đơn hàng (ta sẽ gộp lại) và tổng tiền
+      else if (paymentMethod === 1) {
+        const combinedOrderId = createdOrders.join(';'); // Gộp nhiều mã đơn hàng thành 1 mã
+        return res.status(200).json({
+          orderId: combinedOrderId,
+          amount: totalAmount,
+        });
+      }
+  }
   } catch (error) {
     console.error(error);
     return res.status(401).json({ message: 'Lỗi hệ thống' });
