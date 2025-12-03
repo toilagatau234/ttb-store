@@ -75,7 +75,14 @@ function OrderList() {
       title: "khách hàng",
       key: "owner",
       dataIndex: "deliveryAdd",
-      render: (deliveryAdd) => deliveryAdd.name
+      render: (value, records) => {
+        const total = helpers.calTotalOrderFee2(records); 
+        return (
+          <b  style={{ color: "#333" }}>{helpers.formatProductPrice(total)}</b>
+        );
+      },
+      sorter: (a, b) =>
+        helpers.calTotalOrderFee2(a) - helpers.calTotalOrderFee2(b),
     },
     {
       title: "Mã đơn hàng",

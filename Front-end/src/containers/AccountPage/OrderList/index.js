@@ -73,9 +73,10 @@ function OrderList() {
       dataIndex: "totalMoney",
       key: "totalMoney",
       render: (value, records) => {
-        const total = helpers.calTotalOrderFee2(records);
-        return helpers.formatProductPrice(total);
+        return helpers.formatProductPrice(value);
       },
+      // Sửa lại logic sắp xếp
+      sorter: (a, b) => a.totalMoney - b.totalMoney,
       sorter: (a, b) =>
         helpers.calTotalOrderFee2(a) - helpers.calTotalOrderFee2(b),
     },

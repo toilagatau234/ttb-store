@@ -45,10 +45,10 @@ function PaymentPage() {
 
   const note = useRef("");
   const addressIndex = useRef(-1);
-  
+
   // State quản lý phương thức vận chuyển (0: Tiêu chuẩn, 1: Nhanh...)
   const [transport, setTransport] = useState(0);
-  
+
   // State quản lý phương thức thanh toán (0: COD, 1: VNPAY)
   const [paymentMethod, setPaymentMethod] = useState(0);
 
@@ -137,16 +137,16 @@ function PaymentPage() {
     try {
       const owner = user._id;
       const deliveryAdd = await getUserDeliveryAdd(owner, addressIndex.current);
-      
+
       // Chuẩn bị dữ liệu sản phẩm
       const productList = carts.map((item) => ({
         numOfProd: item.amount,
-        orderProd: { 
-          code: item.code, 
-          name: item.name, 
-          price: item.price, 
-          discount: item.discount, 
-          id: item._id 
+        orderProd: {
+          code: item.code,
+          name: item.name,
+          price: item.price,
+          discount: item.discount,
+          id: item._id
         },
       }));
 
@@ -169,12 +169,12 @@ function PaymentPage() {
       if (paymentMethod === 1) {
         // Tạo mã đơn hàng unique cho giao dịch
         const orderId = `ORDER_${new Date().getTime()}`;
-        
+
         // Gọi API Backend để lấy link thanh toán
         const res = await vnpayApi.createPaymentUrl({
           amount: finalTotal,
           orderId: orderId,
-          bankCode: '', 
+          bankCode: '',
           language: 'vn',
           orderDescription: `Thanh toan don hang ${orderId}`
         });
@@ -182,14 +182,14 @@ function PaymentPage() {
         if (res && res.data && res.data.data) {
           // Lưu đơn hàng chờ vào localStorage để xử lý sau khi thanh toán thành công
           localStorage.setItem('PENDING_ORDER', JSON.stringify(orderData));
-          
+
           // Chuyển hướng sang VNPAY
-          window.location.href = res.data.data; 
+          window.location.href = res.data.data;
         } else {
           message.error("Không lấy được link thanh toán");
           setIsLoading(false);
         }
-      } 
+      }
       // --- TRƯỜNG HỢP 2: THANH TOÁN COD ---
       else {
         const response = await orderApi.postCreateOrder2(orderData);
@@ -284,32 +284,33 @@ function PaymentPage() {
                   <Row gutter={[16, 16]}>
                     {/* COD Option */}
                     <Col span={24} md={12} onClick={() => setPaymentMethod(0)}>
-                      <div 
+                      <div
                         className={`p-tb-16 p-lr-16 bor-rad-8 cursor-pointer ${paymentMethod === 0 ? 'bg-gray item-active' : 'bg-white'}`}
                         style={{ border: paymentMethod === 0 ? '2px solid #3555C5' : '1px solid #ddd' }}
                       >
                         <div className="d-flex align-items-center">
-                           <img src="https://cdn-icons-png.flaticon.com/512/2331/2331941.png" alt="cod" width={32} style={{marginRight: 10}} />
-                           <div>
-                             <b className="font-size-16px">Thanh toán khi nhận hàng (COD)</b>
-                             <div className="font-size-12px">Thanh toán bằng tiền mặt khi nhận hàng</div>
-                           </div>
+                          <img src="https://cdn-icons-png.flaticon.com/512/2331/2331941.png" alt="cod" width={32} style={{ marginRight: 10 }} />
+                          <div>
+                            <b className="font-size-16px">Thanh toán khi nhận hàng (COD)</b>
+                            <div className="font-size-12px">Thanh toán bằng tiền mặt khi nhận hàng</div>
+                          </div>
                         </div>
                       </div>
                     </Col>
-                    
+
                     {/* VNPAY Option */}
                     <Col span={24} md={12} onClick={() => setPaymentMethod(1)}>
-                      <div 
+                      <div
                         className={`p-tb-16 p-lr-16 bor-rad-8 cursor-pointer ${paymentMethod === 1 ? 'bg-gray item-active' : 'bg-white'}`}
                         style={{ border: paymentMethod === 1 ? '2px solid #3555C5' : '1px solid #ddd' }}
                       >
                         <div className="d-flex align-items-center">
-                           <img src="https://vnpay.vn/s1/statics.vnpay.vn/2023/6/0oxhzjmxbksr1686814746080_1561522605975-5663897.png" alt="vnpay" width={32} style={{marginRight: 10}} />
-                           <div>
-                             <b className="font-size-16px">Thanh toán VNPAY</b>
-                             <div className="font-size-12px">Ví VNPAY, Thẻ ngân hàng, QR Code</div>
-                           </div>
+                          <img src="https://res.cloudinary.com/dmlv4rbtm/image/upload/v1764755006/vnpay-logo-vinadesign-25-12-59-16_royutu.jpg" alt="vnpay" width={32} style={{ marginRight: 10 }} />
+                          {/* <img src="https://vnpay.vn/s1/statics.vnpay.vn/2023/6/0oxhzjmxbksr1686814746080_1561522605975-5663897.png" alt="vnpay" width={32} style={{ marginRight: 10 }} /> */}
+                          <div>
+                            <b className="font-size-16px">Thanh toán VNPAY</b>
+                            <div className="font-size-12px">Ví VNPAY, Thẻ ngân hàng, QR Code</div>
+                          </div>
                         </div>
                       </div>
                     </Col>
